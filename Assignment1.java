@@ -14,6 +14,7 @@ public class Lab1 {
 					t.sellTickets(input);
 					break;
 				case 2:
+					t.endMovie();
 					break;
 				case 3:
 					t.changeTicketPrice(input);
@@ -26,6 +27,7 @@ public class Lab1 {
 					t.viewBalance();
 					break;
 				case 7:
+					t.viewPrices();
 					break;
 				case 8:
 					shouldQuit = true;
@@ -78,6 +80,10 @@ class Theater {
 	public void endMovie(){
 		System.out.println("All seats have been vacated and cleaned.\n");
 		this.seats = 50;
+	}
+
+	public void viewPrices(){
+		System.out.println("Current prices:\nTicket: $" + this.ticketPrice + "\nPopcorn: $" + this.popcornPrice + "\nSoda: $" + this.sodaPrice + "\nCandy: $" + this.candyPrice);
 	}
 
 }
