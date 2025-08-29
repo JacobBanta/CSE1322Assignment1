@@ -16,6 +16,7 @@ public class Lab1 {
 				case 2:
 					break;
 				case 3:
+					t.changeTicketPrice(input);
 					break;
 				case 4:
 					break;
@@ -66,6 +67,12 @@ class Theater {
 			this.balance += ammount * this.ticketPrice;
 		}
 		System.out.println();
+	}
+
+	public void changeTicketPrice(Scanner input){
+		System.out.println("Enter new ticket price: $");
+		this.ticketPrice = input.nextDouble();
+		System.out.println("Ticket price updated.\n");
 	}
 
 }
