@@ -11,6 +11,7 @@ public class Lab1 {
 			System.out.println();
 			switch(option){
 				case 1:
+					t.sellTickets(input);
 					break;
 				case 2:
 					break;
@@ -41,7 +42,7 @@ class Theater {
 	double candyPrice;
 
 	public Theater(){
-		seats = 30;
+		seats = 50;
 		balance = 0;
 		ticketPrice = 30;
 		popcornPrice = 25;
@@ -51,6 +52,19 @@ class Theater {
 
 	public void viewBalance(){
 		System.out.println("Current balance is $" + this.balance);
+		System.out.println();
+	}
+
+	public void sellTickets(Scanner input){
+		System.out.println("Sell how many tickets? ");
+		int ammount = input.nextInt();
+		if(ammount > this.seats){
+			System.out.println("Unable to sell " + ammount + " tickets: Only " + this.seats + " seats available.");
+		}else{
+			System.out.println("Sold " + ammount + " tickets at $" + this.ticketPrice + " for a total of $" + ammount * this.ticketPrice);
+			this.seats -= ammount;
+			this.balance += ammount * this.ticketPrice;
+		}
 		System.out.println();
 	}
 
