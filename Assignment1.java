@@ -20,6 +20,7 @@ public class Lab1 {
 					t.changeTicketPrice(input);
 					break;
 				case 4:
+					t.sellConfection(input);
 					break;
 				case 5:
 					break;
@@ -84,6 +85,26 @@ class Theater {
 
 	public void viewPrices(){
 		System.out.println("Current prices:\nTicket: $" + this.ticketPrice + "\nPopcorn: $" + this.popcornPrice + "\nSoda: $" + this.sodaPrice + "\nCandy: $" + this.candyPrice);
+	}
+
+	public void sellConfection(Scanner input){
+		System.out.println("Sell what confection?\n1. Popcorn\n2. Soda\n3. Candy");
+		int type = input.nextInt();
+		switch(type){
+			case 1:
+				System.out.println("sold POPCORN for $" + this.popcornPrice);
+				this.balance += this.popcornPrice;
+				break;
+			case 2:
+				System.out.println("sold SODA for $" + this.sodaPrice);
+				this.balance += this.sodaPrice;
+				break;
+			case 3:
+				System.out.println("sold CANDY for $" + this.candyPrice);
+				this.balance += this.candyPrice;
+				break;
+		}
+		System.out.println();
 	}
 
 }
