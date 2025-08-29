@@ -23,6 +23,7 @@ public class Lab1 {
 					t.sellConfection(input);
 					break;
 				case 5:
+					t.changeConfection(input);
 					break;
 				case 6:
 					t.viewBalance();
@@ -85,6 +86,7 @@ class Theater {
 
 	public void viewPrices(){
 		System.out.println("Current prices:\nTicket: $" + this.ticketPrice + "\nPopcorn: $" + this.popcornPrice + "\nSoda: $" + this.sodaPrice + "\nCandy: $" + this.candyPrice);
+		System.out.println();
 	}
 
 	public void sellConfection(Scanner input){
@@ -102,6 +104,29 @@ class Theater {
 			case 3:
 				System.out.println("sold CANDY for $" + this.candyPrice);
 				this.balance += this.candyPrice;
+				break;
+		}
+		System.out.println();
+	}
+
+	public void changeConfection(Scanner input){
+		System.out.println("Change price of which confection?\n1. Popcorn\n2. Soda\n3. Candy");
+		int type = input.nextInt();
+		switch(type){
+			case 1:
+				System.out.print("Enter new POPCORN price: $");
+				this.popcornPrice = input.nextFloat();
+				System.out.println("POPCORN price updated.");
+				break;
+			case 2:
+				System.out.print("Enter new SODA price: $");
+				this.sodaPrice = input.nextFloat();
+				System.out.println("SODA price updated.");
+				break;
+			case 3:
+				System.out.print("Enter new CANDY price: $");
+				this.candyPrice = input.nextFloat();
+				System.out.println("CANDY price updated.");
 				break;
 		}
 		System.out.println();
