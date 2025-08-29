@@ -70,9 +70,14 @@ class Theater {
 	}
 
 	public void changeTicketPrice(Scanner input){
-		System.out.println("Enter new ticket price: $");
+		System.out.print("Enter new ticket price: $");
 		this.ticketPrice = input.nextDouble();
 		System.out.println("Ticket price updated.\n");
+	}
+
+	public void endMovie(){
+		System.out.println("All seats have been vacated and cleaned.\n");
+		this.seats = 50;
 	}
 
 }
