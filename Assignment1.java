@@ -21,6 +21,7 @@ public class Lab1 {
 				case 5:
 					break;
 				case 6:
+					t.viewBalance();
 					break;
 				case 7:
 					break;
@@ -32,12 +33,12 @@ public class Lab1 {
 	}
 }
 class Theater {
-	public int seats;
-	public double balance;
-	public double ticketPrice;
-	public double popcornPrice;
-	public double sodaPrice;
-	public double candyPrice;
+	int seats;
+	double balance;
+	double ticketPrice;
+	double popcornPrice;
+	double sodaPrice;
+	double candyPrice;
 
 	public Theater(){
 		seats = 30;
@@ -48,5 +49,9 @@ class Theater {
 		candyPrice = 15;
 	}
 
+	public void viewBalance(){
+		System.out.println("Current balance is $" + this.balance);
+		System.out.println();
+	}
 
 }
