@@ -36,6 +36,7 @@ public class Assignment1 {
 					break;
 			}
 		}
+		System.out.println("Shutting off...");
 	}
 }
 class Theater {
